@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../static/files/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/files/css/lightslider.css">
+    <link rel="stylesheet" href="../static/files/css/style.css">
+    <!--  JS  Supporting FIles    -->
+    <script src="../static/files/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/files/js/jquery.js"></script>
+    <script src="../static/files/js/lightslider.js"></script>
+    <script src="../static/files/js/script.js"></script>
+    
+</head>
+<body>
+    <section class="row">
+        {% for item in data %}
+            
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../static/images/{{item[5]}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item[0]}}</h5>
+                      <p class="card-text">{{item[1]}}</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+    </section>
+    
+    
+</body>
+</html>

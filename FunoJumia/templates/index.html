@@ -1,0 +1,58 @@
+<section class="row">
+    <div class="col-md-12">
+       <nav class="navbar navbar-expand-md navbar-light btn-light p-3">
+               <a href="#" class="navbar-brand">Soko <b class="text-success">Garden</b></a>
+               <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                   <span class="navbar-toggler-icon"></span>
+              </button>
+
+               <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                         <a href="/" class="nav-item nav-link">Home</a>
+                         <a href="/" class="nav-item nav-link">Blog</a>
+                         <a href="/" class="nav-item nav-link">About US</a>
+                         <a href="/signup" class="nav-item nav-link">signup</a>
+                    </div>
+                
+               </div>
+               <div>
+                {%if session ['key']%}
+                <p>logged in: {{session['key']}}</p>
+                <a href="/logout">logout</a>
+                {% else %}
+                <a href="/signin">Not signed in? sign in now</a>
+                {% endif %}
+            </div>
+       </nav>
+    </div>
+</section>
+<section class="row">
+     <div class="col-md-4">
+          <h3>Create Account</h3>
+          <span style="color:green;">{{success}}</span>
+          <span style="color:red;">{{error}}</span>
+          <form action="/" method="post">
+              <input type="text" name="id" placeholder="id"
+              class="form-control"> <br>
+
+              <input type="text" name="name" placeholder="name"
+              class="form-control"> <br>
+
+              <input type="tel" name="description" placeholder="description"
+              class="form-control"> <br>
+              <input type="password" name="cost" placeholder="cost"
+              class="form-control"> <br>
+
+              <input type="password" name="category" placeholder="Category"
+              class="form-control"> <br><br>
+
+              <input type="submit" value="goods" class="btn btn-info">
+          </form>
+         <br>
+         
+     </div>
+ </section>
+</div>
+<ol>
+<li><a href="/signin">Already have an account, sign in</a></li>
+</ol>
